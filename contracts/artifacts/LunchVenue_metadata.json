@@ -249,10 +249,10 @@
 	},
 	"sources": {
 		"contracts/LunchVenue.sol": {
-			"keccak256": "0xd78e93099c68f5022b972cb5e6b98fc79cf62fa811afc304fa46368ed010575a",
+			"keccak256": "0x7690a8dc9212cda365e9384f5736f59a70d2fc60ed26660a5ee0813a2c7f4298",
 			"urls": [
-				"bzz-raw://cd3b7b18e13c011235fa1fbd7bc08ba69b09f03e6029e91651716b2aa878f857",
-				"dweb:/ipfs/QmQefytLAyfqNz6Fn5hqpq1JaCNv5TjH8W1mQiKp2UBAt5"
+				"bzz-raw://0ea49e6da315883507d169e4094459940da81091d85794968bd548522acc9e3a",
+				"dweb:/ipfs/QmWggECrD3ggt3S77afGdoR92nzvCin52dJmZ9VAdPzb6w"
 			]
 		}
 	},

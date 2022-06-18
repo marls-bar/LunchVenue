@@ -23,11 +23,11 @@ contract LunchVenueTest is LunchVenue {
     /// ’beforeAll ’ runs before all other tests
     /// More special functions are : ’beforeEach ’, ’beforeAll ’, ’afterEach ’ & ’afterAll ’
     function beforeAll () public {
-        acc0 = TestsAccounts . getAccount (0) ; // Initiate account variables
+        acc0 = TestsAccounts . getAccount(0) ; // Initiate account variables
         acc1 = TestsAccounts . getAccount(1) ;
-        acc2 = TestsAccounts . getAccount (2) ;
-        acc3 = TestsAccounts . getAccount (3) ;
-        acc4 = TestsAccounts . getAccount (4) ;
+        acc2 = TestsAccounts . getAccount(2) ;
+        acc3 = TestsAccounts . getAccount(3) ;
+        acc4 = TestsAccounts . getAccount(4) ;
     }
     /// Account at zero index ( account -0) is default account , so manager will be set to acc0
     function managerTest () public {
@@ -68,7 +68,7 @@ contract LunchVenueTest is LunchVenue {
             Assert .ok(false , 'Method execution should fail ');
         } catch Error ( string memory reason ) {
             // Compare failure reason , check if it is as expected
-            Assert . equal (reason , 'Can only be executed by the manager ', 'Failed with unexpected reason ');
+            Assert . equal (reason , 'Can only be executed by the manager', 'Failed with unexpected reason ');
         } catch ( bytes memory /* lowLevelData */) {
             Assert .ok(false , 'Failed unexpected ') ;
         }

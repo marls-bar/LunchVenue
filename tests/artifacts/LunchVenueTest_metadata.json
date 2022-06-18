@@ -166,6 +166,13 @@
 			},
 			{
 				"inputs": [],
+				"name": "secondVoteForAddressFailure",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "setFriend",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -322,6 +329,9 @@
 				"managerTest()": {
 					"notice": "Account at zero index ( account -0) is default account , so manager will be set to acc0"
 				},
+				"secondVoteForAddressFailure()": {
+					"notice": "Verify inability to vote twice per friend #sender: account-3"
+				},
 				"setFriend()": {
 					"notice": "Set friends as account-0 # sender doesn ’t need to be specified explicitly for account -0"
 				},
@@ -358,7 +368,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"tests/LunchVenue_test.sol": "LunchVenueTest"
+			"tests/LunchVenue_updated_test.sol": "LunchVenueTest"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -372,11 +382,11 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/LunchVenue.sol": {
-			"keccak256": "0xd78e93099c68f5022b972cb5e6b98fc79cf62fa811afc304fa46368ed010575a",
+		"contracts/LunchVenue_updated.sol": {
+			"keccak256": "0x80fbc75687f495c378e63864e233bb722f7c73a14aeebb68cc32821ab5bf5bde",
 			"urls": [
-				"bzz-raw://cd3b7b18e13c011235fa1fbd7bc08ba69b09f03e6029e91651716b2aa878f857",
-				"dweb:/ipfs/QmQefytLAyfqNz6Fn5hqpq1JaCNv5TjH8W1mQiKp2UBAt5"
+				"bzz-raw://8e304e54431720e8e60f89921b0c630d9147e3cb34f7e6e2868196fe2ad5777c",
+				"dweb:/ipfs/QmUAKHMkQSv8XUzKXyRTF3iawt3jChJxts4465jknxrkto"
 			]
 		},
 		"remix_accounts.sol": {
@@ -395,12 +405,12 @@
 				"dweb:/ipfs/QmdkW1tT5iadBvaHMCoskhDGZKnfdg8o1D9CcoQYtdJet7"
 			]
 		},
-		"tests/LunchVenue_test.sol": {
-			"keccak256": "0x3ccc369b9ac04ed7b0b995f7e5a80e4111214363ec0bb602f9b8daf6bb344e11",
+		"tests/LunchVenue_updated_test.sol": {
+			"keccak256": "0xe7e28bcdedd5454c1809e1aa30175ecc9beafb42575fc9a335b7563e414348c3",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://747358633fab08564ff183a91b464fb2547a651a9039f29c26a3338a96b3af3c",
-				"dweb:/ipfs/QmcnqsaMmwFXzZEFZAPqVB8cLxjyZ3jwMYt3tsjQdTe6eN"
+				"bzz-raw://a8c554de98ccd4b52fe9098cacc1640277e1f46d177adeb2a6604cbc2e10f620",
+				"dweb:/ipfs/QmfVUEWETYrmfxbx27C1sgPe5nWMR9nRY8nBopXneVByTa"
 			]
 		}
 	},

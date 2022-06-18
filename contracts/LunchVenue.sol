@@ -3,6 +3,7 @@
 pragma solidity ^0.8.0;
 /// @title Contract to agree on the lunch venue
 contract LunchVenue {
+    
     struct Friend {
         string name ;
         bool voted ;
@@ -28,16 +29,16 @@ contract LunchVenue {
 
     // Creates a new lunch venue contract
     constructor () {
-        manager = msg. sender ; // Set contract creator as manager
+        manager = msg.sender ; // Set contract creator as manager
     }
 
     /// @notice Add a new lunch venue
     /// @dev To simplify the code duplication of venues is not checked
     /// @param name Name of the venue
     /// @return Number of lunch venues added so far
-    function addVenue ( string memory name ) public restricted returns ( uint ){
+    function addVenue(string memory name) public restricted returns (uint){
         numVenues ++;
-        venues [ numVenues ] = name ;
+        venues [numVenues] = name ;
         return numVenues ;
     }   
 
@@ -100,7 +101,7 @@ contract LunchVenue {
 
     /// @notice Only manager can do
     modifier restricted () {
-        require ( msg . sender == manager , " Can only be executed by the manager ");
+        require ( msg . sender == manager , "Can only be executed by the manager");
         _;
     }
 
