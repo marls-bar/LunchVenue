@@ -1,0 +1,408 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "friendAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"name": "addFriend",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"name": "addVenue",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "beforeAll",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "venue",
+						"type": "uint256"
+					}
+				],
+				"name": "doVote",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "validVote",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "friends",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "voted",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lunchVenueTest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "manager",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "managerTest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "numFriends",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "numVenues",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "numVotes",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "setFriend",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "setFriendFailure",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "setLunchVenue",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "setLunchVenueFailure",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "venues",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "vote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "vote2",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "vote3",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "voteAfterClosedFailure",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "voteFailure",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "voteOpenTest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "votedVenue",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"addFriend(address,string)": {
+					"details": "To simplify the code duplication of friends is not checked",
+					"params": {
+						"friendAddress": "Friend ’s account address",
+						"name": "Friend ’s name"
+					},
+					"returns": {
+						"_0": "Number of friends added so far"
+					}
+				},
+				"addVenue(string)": {
+					"details": "To simplify the code duplication of venues is not checked",
+					"params": {
+						"name": "Name of the venue"
+					},
+					"returns": {
+						"_0": "Number of lunch venues added so far"
+					}
+				},
+				"doVote(uint256)": {
+					"details": "To simplify the code multiple votes by a friend is not checked",
+					"params": {
+						"venue": "Venue number being voted"
+					},
+					"returns": {
+						"validVote": "Is the vote valid ? A valid vote should be from a registered end and to a registered venue"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"addFriend(address,string)": {
+					"notice": "Add a new friend who can vote on lunch venue"
+				},
+				"addVenue(string)": {
+					"notice": "Add a new lunch venue"
+				},
+				"beforeAll()": {
+					"notice": "’beforeAll ’ runs before all other tests More special functions are : ’beforeEach ’, ’beforeAll ’, ’afterEach ’ & ’afterAll ’"
+				},
+				"doVote(uint256)": {
+					"notice": "Vote for a lunch venue"
+				},
+				"lunchVenueTest()": {
+					"notice": "Verify lunch venue is set correctly"
+				},
+				"managerTest()": {
+					"notice": "Account at zero index ( account -0) is default account , so manager will be set to acc0"
+				},
+				"setFriend()": {
+					"notice": "Set friends as account-0 # sender doesn ’t need to be specified explicitly for account -0"
+				},
+				"setFriendFailure()": {
+					"notice": "Try adding friend as a user other than manager . This should fail # sender : account-2"
+				},
+				"setLunchVenue()": {
+					"notice": "Add lunch venue as manager When msg. sender isn ’t specified , default account (i.e., account -0) is considered the sender"
+				},
+				"setLunchVenueFailure()": {
+					"notice": "Try to add lunch venue as a user other than manager . This should fail #sender: account-1"
+				},
+				"vote()": {
+					"notice": "Vote as Bob ( acc1 ) # sender : account-1"
+				},
+				"vote2()": {
+					"notice": "Vote as Charlie # sender : account-2"
+				},
+				"vote3()": {
+					"notice": "Vote as Eve # sender : account-3"
+				},
+				"voteAfterClosedFailure()": {
+					"notice": "Verify voting after vote closed . This should fail # sender : account-2"
+				},
+				"voteFailure()": {
+					"notice": "Try voting as a user not in the friends list . This should fail # sender : account-4"
+				},
+				"voteOpenTest()": {
+					"notice": "Verify voting is now closed"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"tests/LunchVenue_test.sol": "LunchVenueTest"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/LunchVenue.sol": {
+			"keccak256": "0xd78e93099c68f5022b972cb5e6b98fc79cf62fa811afc304fa46368ed010575a",
+			"urls": [
+				"bzz-raw://cd3b7b18e13c011235fa1fbd7bc08ba69b09f03e6029e91651716b2aa878f857",
+				"dweb:/ipfs/QmQefytLAyfqNz6Fn5hqpq1JaCNv5TjH8W1mQiKp2UBAt5"
+			]
+		},
+		"remix_accounts.sol": {
+			"keccak256": "0x198a94b8e0342a81c31fda8ba387964155802ef81807e01e83e2320682dce327",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://db7d9939731e6fe2030d53b80f57ce2c1f8044209c1c67e634e81160227d3019",
+				"dweb:/ipfs/QmRLYhZ2Y6bfh83QSD2hCnhVFejevzh77zUTohCCC8yCtu"
+			]
+		},
+		"remix_tests.sol": {
+			"keccak256": "0xe2783cdc204cba8c72494119339f1d90f9022b15d6c718c668b7f097d8e29787",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://bb6a22e64c7f16bcaab63b1c1a1b269d5be8a6d37bdd9dec1718477ab916b18e",
+				"dweb:/ipfs/QmdkW1tT5iadBvaHMCoskhDGZKnfdg8o1D9CcoQYtdJet7"
+			]
+		},
+		"tests/LunchVenue_test.sol": {
+			"keccak256": "0xcdff218b53a11d19e66afe30c6a5db02a4e46b658f84823c90358a42ec35d48b",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://eb83ed5506515827823c7e2b496624539fb8ecb31cb41ef31e939502007fda82",
+				"dweb:/ipfs/QmNbgN4YpBEwnmAZVzcbe7hVBFcy7eHN6ZNhRh1CXmLbau"
+			]
+		}
+	},
+	"version": 1
+}
