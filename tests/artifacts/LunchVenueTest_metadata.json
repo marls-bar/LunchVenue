@@ -326,7 +326,7 @@
 					"notice": "Set friends as account-0 # sender doesn ’t need to be specified explicitly for account -0"
 				},
 				"setFriendFailure()": {
-					"notice": "Try adding friend as a user other than manager . This should fail # sender : account-2"
+					"notice": "Try adding friend as a user other than manager . This should fail #sender: account-2"
 				},
 				"setLunchVenue()": {
 					"notice": "Add lunch venue as manager When msg. sender isn ’t specified , default account (i.e., account -0) is considered the sender"
@@ -335,19 +335,19 @@
 					"notice": "Try to add lunch venue as a user other than manager . This should fail #sender: account-1"
 				},
 				"vote()": {
-					"notice": "Vote as Bob ( acc1 ) # sender : account-1"
+					"notice": "Vote as Bob ( acc1 ) #sender: account-1"
 				},
 				"vote2()": {
-					"notice": "Vote as Charlie # sender : account-2"
+					"notice": "Vote as Charlie #sender: account-2"
 				},
 				"vote3()": {
-					"notice": "Vote as Eve # sender : account-3"
+					"notice": "Vote as Eve #sender: account-3"
 				},
 				"voteAfterClosedFailure()": {
-					"notice": "Verify voting after vote closed . This should fail # sender : account-2"
+					"notice": "Verify voting after vote closed . This should fail #sender: account-2"
 				},
 				"voteFailure()": {
-					"notice": "Try voting as a user not in the friends list . This should fail # sender : account-4"
+					"notice": "Try voting as a user not in the friends list . This should fail #sender: account-4"
 				},
 				"voteOpenTest()": {
 					"notice": "Verify voting is now closed"
@@ -396,11 +396,11 @@
 			]
 		},
 		"tests/LunchVenue_test.sol": {
-			"keccak256": "0xcdff218b53a11d19e66afe30c6a5db02a4e46b658f84823c90358a42ec35d48b",
+			"keccak256": "0x3ccc369b9ac04ed7b0b995f7e5a80e4111214363ec0bb602f9b8daf6bb344e11",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://eb83ed5506515827823c7e2b496624539fb8ecb31cb41ef31e939502007fda82",
-				"dweb:/ipfs/QmNbgN4YpBEwnmAZVzcbe7hVBFcy7eHN6ZNhRh1CXmLbau"
+				"bzz-raw://747358633fab08564ff183a91b464fb2547a651a9039f29c26a3338a96b3af3c",
+				"dweb:/ipfs/QmcnqsaMmwFXzZEFZAPqVB8cLxjyZ3jwMYt3tsjQdTe6eN"
 			]
 		}
 	},
