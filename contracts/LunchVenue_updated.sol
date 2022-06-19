@@ -66,7 +66,7 @@ contract LunchVenue {
     function doVote ( uint venue ) public votingOpen lunchNotCancelled returns ( bool validVote ){
         validVote = false ; // Is the vote valid ?
         if ( bytes ( friends [ msg . sender ]. name ). length != 0) { // Does friend exist ?
-            if (friends[msg.sender].voted == false) {  // Has friend already voted ?
+            if (friends[msg.sender].voted == false) {  // Has friend already voted ?  //WEAKNESS SOLVED BY SIMPLE IF STATEMENT - ADDRESS CAN VOTE ONLY ONCE
                 if ( bytes ( venues [ venue ]) . length != 0) { // Does venue exist ?
                     validVote = true ;
                     friends [msg . sender ]. voted = true ;
@@ -83,19 +83,17 @@ contract LunchVenue {
         }
         return validVote ;
         }
+
     /// @notice Determine winner venue
     /// @dev If top 2 venues have the same no of votes , final result depends on vote order
     function finalResult () private {
         uint highestVotes = 0;
         uint highestVenue = 0;
+        // GAS COST WEAKNESS FIXED THROUGH THE REMOVING AND CONDENSING IF STATEMENT
         for ( uint i = 1; i <= numVotes ; i++) { // For each vote
-            uint voteCount = 1;
-            if( results [ votes [i]. venue ] > 0) { // Already start counting
-                voteCount += results [ votes [i]. venue ];
-            }
-            results [ votes [i]. venue ] = voteCount ;
-            if ( voteCount > highestVotes ){ // New winner
-                highestVotes = voteCount ;
+            results [ votes [i]. venue ] += 1;
+            if ( results [ votes [i]. venue ] > highestVotes ){ // New winner
+                highestVotes = results [ votes [i]. venue ] ;
                 highestVenue = votes [i]. venue ;
             }
         }
@@ -108,6 +106,9 @@ contract LunchVenue {
         voteOpen = true;
     }
 
+    // MANAGER OUT OF CONTROL FIXED BY CANCEL LUNCH FUNCTION, IN ADDITION OTHER FUNCTIONS WHICH GIVE THE MANAGER
+    // MORE POWER HAVE BEEN CREATED I.E. START PHASE + OPENVOTING
+
     /// @notice allow manager to cancel lunch whenever
     function cancelLunch() public restricted {
         lunchCancelled = true;
@@ -118,6 +119,9 @@ contract LunchVenue {
     function uncancelLunch() public restricted {
         lunchCancelled = false;
     }
+
+    // LACK OF CLEAR PHASES FIXED THROUGH THE USE OF MODIFIERS, CALLED AT THE BEGINNING OF EACH FUNCTION
+    // SPECIFICALLY, ADD FRIENDS AND VENUES PHASE + VOTING PHASE + ENDPHASE
 
     /// @notice allow manager to go into the voting phase
     function startVotingPhase() public restricted {
