@@ -9,7 +9,7 @@ import "remix_tests.sol";
 // Although it may fail compilation in 'Solidity Compiler' plugin
 // But it will work fine in 'Solidity Unit Testing' plugin
 import "remix_accounts.sol";
-import "../contracts/LunchVenue.sol";
+import "../contracts/LunchVenue_updated.sol";
 
 // File name has to end with '_test.sol', this file can contain more than one testSuite contracts
 contract LunchVenueTest is LunchVenue {
@@ -102,6 +102,7 @@ contract LunchVenueTest is LunchVenue {
     function voteOpenTest () public {
         Assert . equal ( voteOpen , false , 'Voting should be closed ') ;
     }
+
     /// Verify voting after vote closed . This should fail
     /// #sender: account-2
     function voteAfterClosedFailure () public {

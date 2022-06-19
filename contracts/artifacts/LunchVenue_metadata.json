@@ -54,6 +54,13 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "cancelLunch",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -149,6 +156,41 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "openVoting",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "startAddFriendsAndVenuesPhase",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "startEndPhase",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "startVotingPhase",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "uncancelLunch",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -225,8 +267,23 @@
 				"addVenue(string)": {
 					"notice": "Add a new lunch venue"
 				},
+				"cancelLunch()": {
+					"notice": "allow manager to cancel lunch whenever"
+				},
 				"doVote(uint256)": {
 					"notice": "Vote for a lunch venue"
+				},
+				"openVoting()": {
+					"notice": "allow manager to open voting"
+				},
+				"startAddFriendsAndVenuesPhase()": {
+					"notice": "allow manager to initialise the votes"
+				},
+				"startVotingPhase()": {
+					"notice": "allow manager to go into the voting phase"
+				},
+				"uncancelLunch()": {
+					"notice": "allow manager to uncancel lunch whenever"
 				}
 			},
 			"version": 1
@@ -234,7 +291,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/LunchVenue.sol": "LunchVenue"
+			"contracts/LunchVenue_updated.sol": "LunchVenue"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -248,11 +305,11 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/LunchVenue.sol": {
-			"keccak256": "0x7690a8dc9212cda365e9384f5736f59a70d2fc60ed26660a5ee0813a2c7f4298",
+		"contracts/LunchVenue_updated.sol": {
+			"keccak256": "0xf0f67ad13194c184157e6433266ae3ed944fe561010b49da5029dc5a18dc3313",
 			"urls": [
-				"bzz-raw://0ea49e6da315883507d169e4094459940da81091d85794968bd548522acc9e3a",
-				"dweb:/ipfs/QmWggECrD3ggt3S77afGdoR92nzvCin52dJmZ9VAdPzb6w"
+				"bzz-raw://ffb59d352ecd10172cd9e9d47a5c13cba4f4541e8d8a5a771be47464bd7a93d4",
+				"dweb:/ipfs/QmY3327Tb6SFDJCCxdKG3ea2b3fstrs8mQBGiKyHGzVphW"
 			]
 		}
 	},

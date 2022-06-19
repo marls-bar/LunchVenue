@@ -30,6 +30,13 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "addFriendInWrongPhase",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "string",
@@ -50,7 +57,35 @@
 			},
 			{
 				"inputs": [],
+				"name": "addVenueInWrongPhase",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "beforeAll",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "cancel",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "cancelLunch",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "cancelLunchFailure",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -71,6 +106,13 @@
 						"type": "bool"
 					}
 				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "enableVoting",
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -166,7 +208,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "secondVoteForAddressFailure",
+				"name": "openVoting",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -195,6 +237,41 @@
 			{
 				"inputs": [],
 				"name": "setLunchVenueFailure",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "startAddFriendsAndVenuesPhase",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "startEndPhase",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "startVotingPhase",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "uncancel",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "uncancelLunch",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -241,6 +318,13 @@
 			},
 			{
 				"inputs": [],
+				"name": "voteAfterCancelledFailure",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "voteAfterClosedFailure",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -255,7 +339,21 @@
 			},
 			{
 				"inputs": [],
+				"name": "voteInWrongPhase",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "voteOpenTest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "voteTwice",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -314,14 +412,26 @@
 				"addFriend(address,string)": {
 					"notice": "Add a new friend who can vote on lunch venue"
 				},
+				"addFriendInWrongPhase()": {
+					"notice": "Try to add friends in wrong phase.  This should fail"
+				},
 				"addVenue(string)": {
 					"notice": "Add a new lunch venue"
+				},
+				"addVenueInWrongPhase()": {
+					"notice": "Try to add lunch venue in wrong phase . This should fail"
 				},
 				"beforeAll()": {
 					"notice": "’beforeAll ’ runs before all other tests More special functions are : ’beforeEach ’, ’beforeAll ’, ’afterEach ’ & ’afterAll ’"
 				},
+				"cancelLunch()": {
+					"notice": "allow manager to cancel lunch whenever"
+				},
 				"doVote(uint256)": {
 					"notice": "Vote for a lunch venue"
+				},
+				"enableVoting()": {
+					"notice": "helper unlock voting phase"
 				},
 				"lunchVenueTest()": {
 					"notice": "Verify lunch venue is set correctly"
@@ -329,8 +439,8 @@
 				"managerTest()": {
 					"notice": "Account at zero index ( account -0) is default account , so manager will be set to acc0"
 				},
-				"secondVoteForAddressFailure()": {
-					"notice": "Verify inability to vote twice per friend #sender: account-3"
+				"openVoting()": {
+					"notice": "allow manager to open voting"
 				},
 				"setFriend()": {
 					"notice": "Set friends as account-0 # sender doesn ’t need to be specified explicitly for account -0"
@@ -344,6 +454,15 @@
 				"setLunchVenueFailure()": {
 					"notice": "Try to add lunch venue as a user other than manager . This should fail #sender: account-1"
 				},
+				"startAddFriendsAndVenuesPhase()": {
+					"notice": "allow manager to initialise the votes"
+				},
+				"startVotingPhase()": {
+					"notice": "allow manager to go into the voting phase"
+				},
+				"uncancelLunch()": {
+					"notice": "allow manager to uncancel lunch whenever"
+				},
 				"vote()": {
 					"notice": "Vote as Bob ( acc1 ) #sender: account-1"
 				},
@@ -353,14 +472,23 @@
 				"vote3()": {
 					"notice": "Vote as Eve #sender: account-3"
 				},
+				"voteAfterCancelledFailure()": {
+					"notice": "Verify voting after lunch cancelled . This should fail #sender: account-2"
+				},
 				"voteAfterClosedFailure()": {
 					"notice": "Verify voting after vote closed . This should fail #sender: account-2"
 				},
 				"voteFailure()": {
 					"notice": "Try voting as a user not in the friends list . This should fail #sender: account-4"
 				},
+				"voteInWrongPhase()": {
+					"notice": "Try vote as bob during add friends and venues phase.  This should fail #sender: account-1"
+				},
 				"voteOpenTest()": {
 					"notice": "Verify voting is now closed"
+				},
+				"voteTwice()": {
+					"notice": "Try to vote a second time from the same address.  This should fail #sender: account-3"
 				}
 			},
 			"version": 1
@@ -383,10 +511,10 @@
 	},
 	"sources": {
 		"contracts/LunchVenue_updated.sol": {
-			"keccak256": "0x80fbc75687f495c378e63864e233bb722f7c73a14aeebb68cc32821ab5bf5bde",
+			"keccak256": "0xf0f67ad13194c184157e6433266ae3ed944fe561010b49da5029dc5a18dc3313",
 			"urls": [
-				"bzz-raw://8e304e54431720e8e60f89921b0c630d9147e3cb34f7e6e2868196fe2ad5777c",
-				"dweb:/ipfs/QmUAKHMkQSv8XUzKXyRTF3iawt3jChJxts4465jknxrkto"
+				"bzz-raw://ffb59d352ecd10172cd9e9d47a5c13cba4f4541e8d8a5a771be47464bd7a93d4",
+				"dweb:/ipfs/QmY3327Tb6SFDJCCxdKG3ea2b3fstrs8mQBGiKyHGzVphW"
 			]
 		},
 		"remix_accounts.sol": {
@@ -406,11 +534,11 @@
 			]
 		},
 		"tests/LunchVenue_updated_test.sol": {
-			"keccak256": "0xe7e28bcdedd5454c1809e1aa30175ecc9beafb42575fc9a335b7563e414348c3",
+			"keccak256": "0x3f6f7a0f20aa8caddd643a7abdd82972e0f9d804c943dcda540d5c5a5ccb0626",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://a8c554de98ccd4b52fe9098cacc1640277e1f46d177adeb2a6604cbc2e10f620",
-				"dweb:/ipfs/QmfVUEWETYrmfxbx27C1sgPe5nWMR9nRY8nBopXneVByTa"
+				"bzz-raw://c4c40f8aac628031ce9cef515c31a08af6da2a43d3470ba89925995c82063d30",
+				"dweb:/ipfs/QmdxvdCA3WgksBcDKbpRyYNE8KcWNrbP1Le5h6FrCjHuaV"
 			]
 		}
 	},
